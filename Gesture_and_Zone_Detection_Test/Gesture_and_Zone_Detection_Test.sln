@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gesture_and_Zone_Detection_Test.CSharp.Plugins", "Gesture_and_Zone_Detection_Test.CSharp.Plugins.csproj", "{1D98363E-B117-4944-4267-1DBC10424238}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gesture_and_Zone_Detection_Test.CSharp", "Gesture_and_Zone_Detection_Test.CSharp.csproj", "{E36E0D4F-F0F7-C35B-6E45-341B848BC172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gesture_and_Zone_Detection_Test.CSharp.Editor.Plugins", "Gesture_and_Zone_Detection_Test.CSharp.Editor.Plugins.csproj", "{EB2E6351-92A6-60F6-6910-73668310F5AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gesture_and_Zone_Detection_Test.CSharp.Editor", "Gesture_and_Zone_Detection_Test.CSharp.Editor.csproj", "{A0355C00-CC78-9E87-D4F3-59952521E297}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D98363E-B117-4944-4267-1DBC10424238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D98363E-B117-4944-4267-1DBC10424238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D98363E-B117-4944-4267-1DBC10424238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D98363E-B117-4944-4267-1DBC10424238}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36E0D4F-F0F7-C35B-6E45-341B848BC172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36E0D4F-F0F7-C35B-6E45-341B848BC172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36E0D4F-F0F7-C35B-6E45-341B848BC172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36E0D4F-F0F7-C35B-6E45-341B848BC172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2E6351-92A6-60F6-6910-73668310F5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2E6351-92A6-60F6-6910-73668310F5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2E6351-92A6-60F6-6910-73668310F5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2E6351-92A6-60F6-6910-73668310F5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0355C00-CC78-9E87-D4F3-59952521E297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0355C00-CC78-9E87-D4F3-59952521E297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0355C00-CC78-9E87-D4F3-59952521E297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0355C00-CC78-9E87-D4F3-59952521E297}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
