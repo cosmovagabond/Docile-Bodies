@@ -2,34 +2,42 @@
 using System.Collections;
 using System.Collections.Generic;
 
+//This method is to determine what animation to play when Kinect recognized certain gesture
 public class ZoneReaction : MonoBehaviour {
 
+    //These are all the variables to be accessed from other scripts
     public DetectPresence detectpresence;
     public Transformation transformation;
     public bool malegesture;
     public bool femalegesture;
-    public float timer;
-    public float timerb;
+    private int Phase;
     public int timerTrigger;
+    private int Stoptrigger;
     public PhaseChange PhaseChange;
     public GameObject player1;
     public GameObject player2;
     public GameObject player1translate;
     public GameObject player2translate;   
-         
+    
+    //These two are used in old method of presence detectation
     private int Zone1_Trigger;
     private int Zone2_Trigger;
-    private int Stoptrigger;
+
+    //These are the animation control variables
     private Animator anim1;
     private Animator anim2;
-    private int Phase;
+    
+    //Timers used to prevent false positive
     private float timer1;
     private float timer2;
-   
+    public float timer;
+    public float timerb;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
         
+        //define the animation controller
         anim1 = player1.GetComponent<Animator>();
         anim2 = player2.GetComponent<Animator>();
 
@@ -41,15 +49,19 @@ public class ZoneReaction : MonoBehaviour {
         player1translate.transform.eulerAngles = new Vector3(0, detectpresence.FloatangleRadians, 0);
         player2translate.transform.eulerAngles = new Vector3(0, detectpresence.FloatangleRadians, 0);
 
+        //Old method for detecting presence
         //Zone1_Trigger = detectpresence.Zone1_presence;
         //Zone2_Trigger = detectpresence.Zone2_presence;
-        Stoptrigger = detectpresence.Stoptrigger;
 
+        //Get data from DetectPresence.cs
+        Stoptrigger = detectpresence.Stoptrigger;
+        //Get data from Transformation.cs
         malegesture = transformation.MaleGesture;
         femalegesture = transformation.FemaleGesture;
+        //Get data from PhaseChange.cs
         Phase = PhaseChange.Phase;
-        // if viewer holds "male gesture" correctly and over 1 second, then the model plays the "maleReaction"
 
+        // if viewer holds "male gesture" correctly and over 1 second, then the model plays the "maleReaction"
         if (Phase == 1)
         {
             if (malegesture)
@@ -156,10 +168,12 @@ public class ZoneReaction : MonoBehaviour {
                 }
 
             }
+
             // if once the leap forward animation has played, it is now returned to the 0 0 0 
             // state once its completed. Otherwise, it would loop, building the rotational radians turn
             if (anim1.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
+                //reset model position
                 player1.transform.position = new Vector3(0, 0, 0);
                 player2.transform.position = new Vector3(0, 0, 0);
                 player1.transform.rotation = new Quaternion(0, 0, 0, 0);
