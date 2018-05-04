@@ -1,2 +1,2 @@
 # Docile-Bodies
-A project created by Lorelei Pepi
+Interactive project development using Unity and Kinect
